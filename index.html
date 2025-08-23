@@ -1,36 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Diabetes Prediction Form</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diabetes Prediction Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #6dd5ed, #2193b0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+      width: 400px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #2193b0;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      font-weight: 600;
+      margin: 10px 0 5px;
+      color: #333;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input[type="number"]:focus {
+      border-color: #2193b0;
+      box-shadow: 0px 0px 5px rgba(33,147,176,0.5);
+    }
+
+    .btn {
+      background: #2193b0;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #17627d;
+    }
+  </style>
 </head>
 <body>
-    <h2>Enter Patient Details</h2>
+  <div class="container">
+    <h2>Diabetes Prediction</h2>
     <form method="POST" action="/predict">
-        <label for="pregnancies">Pregnancies:</label>
-        <input type="number" id="pregnancies" name="pregnancies" required><br><br>
+      <label for="pregnancies">Pregnancies:</label>
+      <input type="number" id="pregnancies" name="pregnancies" required>
 
-        <label for="glucose">Glucose:</label>
-        <input type="number" id="glucose" name="glucose" required><br><br>
+      <label for="glucose">Glucose:</label>
+      <input type="number" id="glucose" name="glucose" required>
 
-        <label for="bloodpressure">Blood Pressure:</label>
-        <input type="number" id="bloodpressure" name="bloodpressure" required><br><br>
+      <label for="bloodpressure">Blood Pressure:</label>
+      <input type="number" id="bloodpressure" name="bloodpressure" required>
 
-        <label for="skinthickness">Skin Thickness:</label>
-        <input type="number" id="skinthickness" name="skinthickness" required><br><br>
+      <label for="skinthickness">Skin Thickness:</label>
+      <input type="number" id="skinthickness" name="skinthickness" required>
 
-        <label for="insulin">Insulin:</label>
-        <input type="number" id="insulin" name="insulin" required><br><br>
+      <label for="insulin">Insulin:</label>
+      <input type="number" id="insulin" name="insulin" required>
 
-        <label for="bmi">BMI:</label>
-        <input type="number" step="any" id="bmi" name="bmi" required><br><br>
+      <label for="bmi">BMI:</label>
+      <input type="number" step="any" id="bmi" name="bmi" required>
 
-        <label for="dpf">Diabetes Pedigree Function:</label>
-        <input type="number" step="any" id="dpf" name="dpf" required><br><br>
+      <label for="dpf">Diabetes Pedigree Function:</label>
+      <input type="number" step="any" id="dpf" name="dpf" required>
 
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" required><br><br>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required>
 
-        <input type="submit" value="Predict">
+      <button type="submit" class="btn">Predict</button>
     </form>
+  </div>
 </body>
 </html>
